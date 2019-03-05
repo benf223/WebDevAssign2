@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Admin</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="ajaxconnector.js"></script>
+	<!--Bootstrap requirements-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1 class="text-center">Cabs Online Booking Administration</h1>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="container" style="max-width: 50%">
+			<div class="col">
+				<form>
+					<div class="form-group">
+						<input id="referencenumber" name="reference" type="number" placeholder="Reference Number" class="form-control">
+					</div>
+					<input type="button" name="submit" value="Assign Taxi" onClick="assignBooking(reference.value)" class="btn btn-primary">
+				</form>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<div class="container" style="max-width: 50%">
+			<div class="col" id="requestOutput">
+				<button class="btn btn-primary btn-block text-center" onClick="retrieveBookingsData()" id="requestButton">Show Requests</button>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="row">
+		<table id="bookings" class="table table-bordered"></table>
+	</div>
+</div>
+</body>
+</html>

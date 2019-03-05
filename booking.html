@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="ajaxconnector.js"></script>
+	<!--Bootstrap requirements-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col">
+			<h1 class="text-center">Cabs Online Booking System</h1>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col">
+			<!--Form data being collected for the processing page-->
+			<form>
+				<div class="form-group">
+					<label>Name: </label>
+					<input id="namelabel" type="text" class="form-control">
+					<p></p>
+				</div>
+				<div class="form-group">
+					<label>Phone Number: </label>
+					<input id="phonelabel" type="text" class="form-control">
+					<p></p>
+				</div>
+				<div class="form-group">
+					<label>Destination Suburb: </label>
+					<input id="destsuburblabel" type="text" class="form-control">
+					<p></p>
+				</div>
+				<div class="container">
+					<div class="form-group">
+						<table class="table">
+							<tr>
+								<th>Pickup Details:</th>
+							</tr>
+							<tr>
+								<td>
+									<label>Unit Number: </label>
+									<input id="unitnolabel" type="text" placeholder="Optional" class="form-control">
+								</td>
+								<td>
+									<label>Street Number: </label>
+									<input id="streetnolabel" type="text" class="form-control">
+									<p></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Street Name: </label>
+									<input id="streetnamelabel" type="text" class="form-control">
+									<p></p>
+								</td>
+								<td>
+									<label>Suburb: </label>
+									<input id="pickupsuburblabel" type="text" class="form-control">
+									<p></p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label>Date: </label>
+									<!--Provides a date selector for the user and provides the current date-->
+									<input id="date" type="date" required class="form-control">
+									<p></p>
+								</td>
+								<td>
+									<label>Time: </label>
+									<!--Provides a time selector for the user and provides the current date-->
+									<input id="time" type="time" required class="form-control">
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<input type="button" name="submit" value="Submit" onClick="submitData()" class="btn btn-primary">
+				<input type="reset" class="btn btn-secondary">
+			</form>
+			<br>
+			<div id="output">
+				<p></p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	document.querySelector("#date").value = getDate();
+	document.querySelector("#time").value = getTime();
+</script>
+</body>
+</html>
